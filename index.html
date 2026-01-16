@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kunterbunt Juggling Convention</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <nav class="nav">
+          <div class="logo">Kunterbunt</div>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#program">Program</a>
+            <a href="#tickets">Tickets</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <button class="nav-cta" type="button">Get Tickets</button>
+        </nav>
+
+        <div class="hero-content">
+          <p class="pill">Flinta Juggling Convention · Berlin · 24–27 July 2025</p>
+          <h1>Kunterbunt Juggling Convention</h1>
+          <p class="hero-lead">
+            A joyful, inclusive weekend for FLINTA jugglers, flow artists, and circus lovers.
+            Expect workshops, jams, night shows, and space to connect with a supportive community.
+          </p>
+          <div class="hero-actions">
+            <button class="primary-btn" type="button">Reserve a Ticket</button>
+            <button class="ghost-btn" type="button">Download Program</button>
+          </div>
+          <div class="hero-highlights">
+            <div>
+              <h3>45+ Workshops</h3>
+              <p>From beginner foundations to creative juggling labs.</p>
+            </div>
+            <div>
+              <h3>4 Stage Shows</h3>
+              <p>Curated performances with local and international artists.</p>
+            </div>
+            <div>
+              <h3>Community Care</h3>
+              <p>Chill zones, consent-trained hosts, and quiet corners.</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section id="about" class="section">
+        <div class="section-title">
+          <h2>About the Convention</h2>
+          <p>
+            Kunterbunt is a FLINTA-centered juggling convention celebrating color, creativity, and
+            community. We focus on safer spaces, accessible workshops, and joyful movement.
+          </p>
+        </div>
+        <div class="info-grid">
+          <div class="info-card">
+            <h3>Inclusive Workshops</h3>
+            <p>
+              Skill tracks in juggling, object manipulation, clowning, and flow arts with
+              multilingual instruction.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3>Well-being & Care</h3>
+            <p>
+              Dedicated quiet rooms, peer support teams, and accessibility stewards to make the
+              weekend comfortable.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3>Community Nights</h3>
+            <p>
+              Open stages, jam circles, and community dinners with vegetarian and vegan options.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="program" class="section program">
+        <div class="section-title">
+          <h2>Program Highlights</h2>
+          <p>Plan your days with vibrant workshops, shows, and chill spaces.</p>
+        </div>
+        <div class="program-grid">
+          <div class="program-card">
+            <span>Thursday</span>
+            <h3>Arrival & Welcome Jam</h3>
+            <p>Registration, campsite set-up, and a sunset juggling circle.</p>
+          </div>
+          <div class="program-card">
+            <span>Friday</span>
+            <h3>Skill Labs & Open Stage</h3>
+            <p>Workshop tracks, flow lab, and open mic performance night.</p>
+          </div>
+          <div class="program-card">
+            <span>Saturday</span>
+            <h3>Showcase Gala</h3>
+            <p>Main stage show with live DJ, fire jam, and silent disco.</p>
+          </div>
+          <div class="program-card">
+            <span>Sunday</span>
+            <h3>Community Brunch</h3>
+            <p>Slow flow session, closing circle, and farewell brunch.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tickets" class="section tickets">
+        <div class="section-title">
+          <h2>Tickets</h2>
+          <p>Secure your spot with Stripe checkout. Sliding scale options available.</p>
+        </div>
+        <div class="ticket-grid">
+          <div class="ticket-card">
+            <h3>Community Ticket</h3>
+            <p class="price">€85</p>
+            <ul>
+              <li>Full weekend access</li>
+              <li>All workshops + shows</li>
+              <li>Community dinner</li>
+            </ul>
+            <button class="primary-btn" type="button">Buy Community Ticket</button>
+          </div>
+          <div class="ticket-card featured">
+            <h3>Supporter Ticket</h3>
+            <p class="price">€120</p>
+            <ul>
+              <li>Everything in Community</li>
+              <li>Support FLINTA scholarships</li>
+              <li>Reserved seating at gala</li>
+            </ul>
+            <button class="primary-btn" type="button">Buy Supporter Ticket</button>
+          </div>
+          <div class="ticket-card">
+            <h3>Day Pass</h3>
+            <p class="price">€40</p>
+            <ul>
+              <li>Single day access</li>
+              <li>Workshop + jam entry</li>
+              <li>Evening show access</li>
+            </ul>
+            <button class="primary-btn" type="button">Buy Day Pass</button>
+          </div>
+        </div>
+        <div class="stripe-box">
+          <div>
+            <h3>Stripe Checkout Integration</h3>
+            <p>
+              Payments are handled securely through Stripe. Click a ticket to launch checkout. For
+              implementation, connect the button to a backend endpoint that creates a Checkout
+              Session and returns the session ID.
+            </p>
+          </div>
+          <button class="ghost-btn" type="button">View Stripe Docs</button>
+        </div>
+        <form class="stripe-form" id="stripe-form">
+          <label for="email">Receive a confirmation</label>
+          <input id="email" type="email" placeholder="you@example.com" required />
+          <button class="primary-btn" type="submit">Continue to Stripe</button>
+        </form>
+        <p class="stripe-note">
+          Stripe will open in a new tab. We never store your card details.
+        </p>
+      </section>
+
+      <section id="faq" class="section faq">
+        <div class="section-title">
+          <h2>FAQ</h2>
+          <p>Need to know more? We have you covered.</p>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-card">
+            <h3>Who can attend?</h3>
+            <p>
+              The convention is for FLINTA participants and allies who respect the safer space
+              guidelines.
+            </p>
+          </div>
+          <div class="faq-card">
+            <h3>Where is it held?</h3>
+            <p>
+              Kulturcampus Berlin, with indoor studios, outdoor lawns, and on-site camping.
+            </p>
+          </div>
+          <div class="faq-card">
+            <h3>Is there financial support?</h3>
+            <p>
+              Yes. We reserve discounted tickets and travel grants. Email
+              hello@kunterbunt-juggling.org.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>
+          <h3>Kunterbunt Juggling Convention</h3>
+          <p>Flinta-led · Community-powered · Joyfully inclusive.</p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:hello@kunterbunt-juggling.org">hello@kunterbunt-juggling.org</a>
+          <a href="#tickets">Tickets</a>
+          <a href="#program">Program</a>
+        </div>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
