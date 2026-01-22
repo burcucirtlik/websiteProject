@@ -1,5 +1,8 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: process.env.BASE_URL || '/',
-})
+  // GitHub Pages proje sayfası için gerekli:
+  // https://username.github.io/REPO_ADI/
+  base: "/websiteProject/",
+});
+
