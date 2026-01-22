@@ -67,8 +67,15 @@ if (stripeButton) {
     const successUrl = stripeButton.dataset.successUrl || window.location.origin
     const cancelUrl = stripeButton.dataset.cancelUrl || window.location.href
 
-    if (!publishableKey || !priceId || publishableKey.includes('change_me') || priceId.includes('change_me')) {
+    const isMocked = publishableKey === 'pk_test_mock' || priceId === 'price_mock'
+
+    if (!publishableKey || !priceId) {
       window.alert('Stripe checkout is not configured. Please add your publishable key and price ID.')
+      return
+    }
+
+    if (isMocked) {
+      window.alert('Mock checkout enabled. Replace Stripe keys to process real payments.')
       return
     }
 
