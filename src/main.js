@@ -59,23 +59,32 @@ prefersReducedMotion.addEventListener('change', (event) => {
 })
 
 const stripeButton = document.querySelector('#stripe-checkout')
+const ticketRadios = document.querySelectorAll('input[name="ticket-tier"]')
 
 if (stripeButton) {
   stripeButton.addEventListener('click', async () => {
     const publishableKey = stripeButton.dataset.stripeKey
-    const priceId = stripeButton.dataset.priceId
+    const selectedTier = document.querySelector('input[name="ticket-tier"]:checked')
+    const priceId = selectedTier?.dataset.priceId
     const successUrl = stripeButton.dataset.successUrl || window.location.origin
     const cancelUrl = stripeButton.dataset.cancelUrl || window.location.href
 
-    const isMocked = publishableKey === 'pk_test_mock' || priceId === 'price_mock'
+    const isMocked =
+      publishableKey === 'pk_test_mock' || (priceId ? priceId.startsWith('price_mock') : false)
 
     if (!publishableKey || !priceId) {
       window.alert('Stripe checkout is not configured. Please add your publishable key and price ID.')
       return
     }
 
+    if (!selectedTier) {
+      window.alert('Please select a ticket option to continue.')
+      return
+    }
+
     if (isMocked) {
-      window.alert('Mock checkout enabled. Replace Stripe keys to process real payments.')
+      const tierName = selectedTier?.dataset.display || 'this ticket'
+      window.alert(`Mock checkout enabled for ${tierName}. Replace Stripe keys to process real payments.`)
       return
     }
 

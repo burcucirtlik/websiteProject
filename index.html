@@ -42,23 +42,77 @@
                 coast. A welcoming FLINTA+ friendly space for playful skill-sharing,
                 inclusive jams, and vibrant community moments.
               </p>
+              <div class="ticket-options" data-animate>
+                <label class="ticket-option">
+                  <input
+                    type="radio"
+                    name="ticket-tier"
+                    value="early-bird"
+                    checked
+                    data-price-id="price_mock_early"
+                    data-display="Early Bird"
+                  />
+                  <span>
+                    <strong>Early Bird</strong>
+                    <span class="ticket-price-label">₺990 • Limited</span>
+                  </span>
+                </label>
+                <label class="ticket-option">
+                  <input
+                    type="radio"
+                    name="ticket-tier"
+                    value="full-support"
+                    data-price-id="price_mock_full"
+                    data-display="Full Support"
+                  />
+                  <span>
+                    <strong>Full Support</strong>
+                    <span class="ticket-price-label">₺1.450 • Standard</span>
+                  </span>
+                </label>
+                <label class="ticket-option">
+                  <input
+                    type="radio"
+                    name="ticket-tier"
+                    value="community"
+                    data-price-id="price_mock_community"
+                    data-display="Community"
+                  />
+                  <span>
+                    <strong>Community</strong>
+                    <span class="ticket-price-label">₺1.150 • Sliding</span>
+                  </span>
+                </label>
+                <label class="ticket-option">
+                  <input
+                    type="radio"
+                    name="ticket-tier"
+                    value="solidarity"
+                    data-price-id="price_mock_solidarity"
+                    data-display="Solidarity"
+                  />
+                  <span>
+                    <strong>Solidarity</strong>
+                    <span class="ticket-price-label">₺1.950 • Sponsor</span>
+                  </span>
+                </label>
+              </div>
               <div class="hero-actions">
                 <button
                   class="btn"
                   id="stripe-checkout"
                   type="button"
                   data-stripe-key="pk_test_mock"
-                  data-price-id="price_mock"
                   data-success-url="https://example.com/success"
                   data-cancel-url="https://example.com/cancel"
                 >
-                  Get Tickets
+                  Continue to Checkout
                 </button>
                 <a class="btn btn-ghost" href="#mekan">See Venue</a>
               </div>
               <p class="note">
-                Ticket payments are processed via Stripe Checkout. This demo uses mocked Stripe
-                values; replace them with live keys to activate payments.
+                Choose a ticket tier to continue. This demo uses mocked Stripe values; replace
+                them with live keys to activate payments.
               </p>
               <div class="hero-meta">
                 <div>

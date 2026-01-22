@@ -199,6 +199,51 @@ summary:focus-visible {
   margin-bottom: 2rem;
 }
 
+.ticket-options {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.ticket-option {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.ticket-option input {
+  accent-color: var(--primary);
+  width: 18px;
+  height: 18px;
+}
+
+.ticket-option strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.ticket-price-label {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.ticket-option:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.ticket-option:has(input:checked) {
+  border-color: var(--secondary);
+  box-shadow: 0 10px 24px rgba(255, 144, 200, 0.2);
+}
+
 .hero-meta {
   display: flex;
   gap: 2rem;
