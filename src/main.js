@@ -57,3 +57,36 @@ prefersReducedMotion.addEventListener('change', (event) => {
     revealElements()
   }
 })
+
+const stripeButton = document.querySelector('#stripe-checkout')
+
+if (stripeButton) {
+  stripeButton.addEventListener('click', async () => {
+    const publishableKey = stripeButton.dataset.stripeKey
+    const priceId = stripeButton.dataset.priceId
+    const successUrl = stripeButton.dataset.successUrl || window.location.origin
+    const cancelUrl = stripeButton.dataset.cancelUrl || window.location.href
+
+    if (!publishableKey || !priceId || publishableKey.includes('change_me') || priceId.includes('change_me')) {
+      window.alert('Stripe checkout is not configured. Please add your publishable key and price ID.')
+      return
+    }
+
+    if (!window.Stripe) {
+      window.alert('Stripe.js failed to load. Please check your network connection.')
+      return
+    }
+
+    const stripe = window.Stripe(publishableKey)
+    const { error } = await stripe.redirectToCheckout({
+      lineItems: [{ price: priceId, quantity: 1 }],
+      mode: 'payment',
+      successUrl,
+      cancelUrl,
+    })
+
+    if (error) {
+      window.alert(error.message)
+    }
+  })
+}

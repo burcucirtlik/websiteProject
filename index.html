@@ -43,9 +43,23 @@
                 inclusive jams, and vibrant community moments.
               </p>
               <div class="hero-actions">
-                <a class="btn" href="#bilet">Get Tickets</a>
+                <button
+                  class="btn"
+                  id="stripe-checkout"
+                  type="button"
+                  data-stripe-key="pk_test_change_me"
+                  data-price-id="price_change_me"
+                  data-success-url="https://example.com/success"
+                  data-cancel-url="https://example.com/cancel"
+                >
+                  Get Tickets
+                </button>
                 <a class="btn btn-ghost" href="#mekan">See Venue</a>
               </div>
+              <p class="note">
+                Ticket payments are processed via Stripe Checkout. Update the publishable key and
+                price ID to activate payments.
+              </p>
               <div class="hero-meta">
                 <div>
                   <span class="meta-label">Dates</span>
@@ -152,6 +166,7 @@
         </div>
       </footer>
     </div>
+    <script src="https://js.stripe.com/v3"></script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

@@ -205,6 +205,12 @@ summary:focus-visible {
   font-size: 0.95rem;
 }
 
+.note {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
 .meta-label {
   display: block;
   color: var(--muted);
