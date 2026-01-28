@@ -1,0 +1,78 @@
+{
+  "festivalName": "Kunterbunt Juggling Festival",
+  "headerMeta": "Austria",
+  "eyebrow": "Juggling • Flow Arts • Community",
+  "heroTitle": "Kunterbunt Juggling Festival 2025",
+  "heroLead": "At the heart of the festival is the open practice hall, where everyone can juggle freely, share new patterns, and explore passing games together. Guided workshops add focused learning with expert jugglers, while community showcases, friendly competitions, and an open-stage renegade night invite anyone to perform. Over three bright days by the Aegean coast, we gather for an inclusive, FLINTA+ friendly celebration of skill-sharing, playful experimentation, and joyful connection.",
+  "note": "Choose a ticket tier to continue. This demo uses mocked Stripe values; replace them with live keys to activate payments.",
+  "datesLabel": "Dates",
+  "datesValue": "12-14 July 2025",
+  "locationLabel": "Location",
+  "locationValue": "Izmir / Seferihisar",
+  "ticketOptions": [
+    {
+      "tierId": "early-bird",
+      "title": "Early Bird",
+      "priceLabel": "₺990 • Limited",
+      "priceId": "price_mock_early"
+    },
+    {
+      "tierId": "full-support",
+      "title": "Full Support",
+      "priceLabel": "₺1.450 • Standard",
+      "priceId": "price_mock_full"
+    },
+    {
+      "tierId": "community",
+      "title": "Community",
+      "priceLabel": "₺1.150 • Sliding",
+      "priceId": "price_mock_community"
+    },
+    {
+      "tierId": "solidarity",
+      "title": "Solidarity",
+      "priceLabel": "₺1.950 • Sponsor",
+      "priceId": "price_mock_solidarity"
+    }
+  ],
+  "venueTitle": "Venue / Map",
+  "venueDescription": "By the Seferihisar coast in a natural amphitheater. Map is embedded below.",
+  "travelTitle": "Travel",
+  "travelDescription": "Shuttles from central Izmir depart every 30 minutes.",
+  "travelBullets": [
+    "Parking capacity: 1,500 vehicles",
+    "Accessible entrances at all gates",
+    "Bike parking available"
+  ],
+  "faqTitle": "FAQ",
+  "faqDescription": "Frequently asked questions about the festival experience.",
+  "faqs": [
+    {
+      "question": "Can I transfer my ticket?",
+      "answer": "Yes, tickets are transferable with a name update."
+    },
+    {
+      "question": "Is there a camping area?",
+      "answer": "Yes, a supervised camping area is located next to the festival grounds."
+    },
+    {
+      "question": "Food & drink options",
+      "answer": "A wide selection from local flavors to vegan options will be available."
+    }
+  ],
+  "partnersTitle": "Partners",
+  "partnersDescription": "Supporters and collaborators of the festival.",
+  "partners": [
+    "Kunterbunt Collective",
+    "Ege Arts Center",
+    "Flow Gear",
+    "Seferihisar Municipality"
+  ],
+  "contactTitle": "Contacts",
+  "contactDescription": "Reach out for partnerships, accessibility requests, or ticket support.",
+  "footerTitle": "Kunterbunt Juggling Festival",
+  "footerDescription": "Stay updated for workshops, jam sessions, and ticket releases.",
+  "email": "hello@kunterbuntfest.com",
+  "phone": "+90 212 000 00 00",
+  "footerCopyright": "© 2025 Kunterbunt Juggling Festival"
+}
