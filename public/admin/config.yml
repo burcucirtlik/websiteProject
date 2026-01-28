@@ -1,9 +1,10 @@
 backend:
   name: github
-  repo: your-org/your-repo
+  repo: burcucirtlik/websiteProject
   branch: main
-  auth_endpoint: https://your-worker-url.example.com/auth
-  app_id: your-github-oauth-app-id
+  auth_type: pkce
+  auth_endpoint: "https://websiteproject-auth.burcucirtlik.workers.dev/auth"
+  app_id: Ov23liagb7pwiXxXuNSw
 local_backend: false
 media_folder: "public/uploads"
 public_folder: "/uploads"
