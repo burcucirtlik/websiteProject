@@ -37,7 +37,6 @@ collections:
               - { label: "Price ID", name: "priceId", widget: "string" }
           - { label: "Venue Title", name: "venueTitle", widget: "string" }
           - { label: "Venue Description", name: "venueDescription", widget: "text" }
-          - { label: "Map Placeholder", name: "mapPlaceholder", widget: "string" }
           - { label: "Travel Title", name: "travelTitle", widget: "string" }
           - { label: "Travel Description", name: "travelDescription", widget: "text" }
           - { label: "Travel Bullets", name: "travelBullets", widget: "list" }
@@ -52,6 +51,8 @@ collections:
           - { label: "Partners Title", name: "partnersTitle", widget: "string" }
           - { label: "Partners Description", name: "partnersDescription", widget: "string" }
           - { label: "Partners", name: "partners", widget: "list" }
+          - { label: "Contact Title", name: "contactTitle", widget: "string" }
+          - { label: "Contact Description", name: "contactDescription", widget: "text" }
           - { label: "Footer Title", name: "footerTitle", widget: "string" }
           - { label: "Footer Description", name: "footerDescription", widget: "string" }
           - { label: "Email", name: "email", widget: "string" }

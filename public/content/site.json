@@ -1,9 +1,9 @@
 {
-  "festivalName": "Kunterbunt Juggling Festivali",
-  "headerMeta": "12-14 July 2025 • Izmir",
+  "festivalName": "Kunterbunt Juggling Festival",
+  "headerMeta": "Austria",
   "eyebrow": "Juggling • Flow Arts • Community",
-  "heroTitle": "Kunterbunt Juggling Festivali 2025",
-  "heroLead": "Three days of juggling, workshops, and joyful encounters by the Aegean coast. A welcoming FLINTA+ friendly space for playful skill-sharing, inclusive jams, and vibrant community moments.",
+  "heroTitle": "Kunterbunt Juggling Festival 2025",
+  "heroLead": "At the heart of the festival is the open practice hall, where everyone can juggle freely, share new patterns, and explore passing games together. Guided workshops add focused learning with expert jugglers, while community showcases, friendly competitions, and an open-stage renegade night invite anyone to perform. Over three bright days by the Aegean coast, we gather for an inclusive, FLINTA+ friendly celebration of skill-sharing, playful experimentation, and joyful connection.",
   "note": "Choose a ticket tier to continue. This demo uses mocked Stripe values; replace them with live keys to activate payments.",
   "datesLabel": "Dates",
   "datesValue": "12-14 July 2025",
@@ -36,8 +36,7 @@
     }
   ],
   "venueTitle": "Venue / Map",
-  "venueDescription": "By the Seferihisar coast in a natural amphitheater. Map will go live soon.",
-  "mapPlaceholder": "Map Loading",
+  "venueDescription": "By the Seferihisar coast in a natural amphitheater. Map is embedded below.",
   "travelTitle": "Travel",
   "travelDescription": "Shuttles from central Izmir depart every 30 minutes.",
   "travelBullets": [
@@ -69,9 +68,11 @@
     "Flow Gear",
     "Seferihisar Municipality"
   ],
-  "footerTitle": "Kunterbunt Juggling Festivali",
+  "contactTitle": "Contacts",
+  "contactDescription": "Reach out for partnerships, accessibility requests, or ticket support.",
+  "footerTitle": "Kunterbunt Juggling Festival",
   "footerDescription": "Stay updated for workshops, jam sessions, and ticket releases.",
   "email": "hello@kunterbuntfest.com",
   "phone": "+90 212 000 00 00",
-  "footerCopyright": "© 2025 Kunterbunt Juggling Festivali"
+  "footerCopyright": "© 2025 Kunterbunt Juggling Festival"
 }
