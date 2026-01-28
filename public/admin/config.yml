@@ -2,8 +2,9 @@ backend:
   name: github
   repo: burcucirtlik/websiteProject
   branch: main
-  auth_endpoint: https://your-worker-url.example.com/auth
-  app_id: your-github-oauth-app-id
+  auth_type: pkce
+  auth_endpoint: "https://websiteproject-auth.burcucirtlik.workers.dev/auth"
+  app_id: Ov23liagb7pwiXxXuNSw
 local_backend: false
 site_url: https://burcucirtlik.github.io/websiteProject
 display_url: https://burcucirtlik.github.io/websiteProject
