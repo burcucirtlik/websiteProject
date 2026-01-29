@@ -3,7 +3,7 @@ backend:
   repo: burcucirtlik/websiteProject
   branch: main
   auth_type: pkce
-  auth_endpoint: "https://websiteproject-auth.burcucirtlik.workers.dev/auth"
+  auth_endpoint: "https://websiteproject-auth.burcucirtlik.workers.dev/auth/burcu"
   app_id: Ov23liagb7pwiXxXuNSw
 local_backend: false
 site_url: https://burcucirtlik.github.io/websiteProject
