@@ -1,0 +1,63 @@
+backend:
+  name: github
+  repo: burcucirtlik/websiteProject
+  branch: main
+  auth_endpoint: https://your-worker-url.example.com/auth
+  app_id: your-github-oauth-app-id
+local_backend: false
+site_url: https://burcucirtlik.github.io/websiteProject
+display_url: https://burcucirtlik.github.io/websiteProject
+auth_redirect: https://burcucirtlik.github.io/websiteProject/admin/auth.html
+media_folder: "public/uploads"
+public_folder: "/uploads"
+publish_mode: editorial_workflow
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+      - file: "public/content/site.json"
+        label: "Homepage"
+        name: "homepage"
+        format: "json"
+        fields:
+          - { label: "Festival Name", name: "festivalName", widget: "string" }
+          - { label: "Header Meta", name: "headerMeta", widget: "string" }
+          - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Lead", name: "heroLead", widget: "text" }
+          - { label: "Note", name: "note", widget: "text" }
+          - { label: "Dates Label", name: "datesLabel", widget: "string" }
+          - { label: "Dates Value", name: "datesValue", widget: "string" }
+          - { label: "Location Label", name: "locationLabel", widget: "string" }
+          - { label: "Location Value", name: "locationValue", widget: "string" }
+          - label: "Ticket Options"
+            name: "ticketOptions"
+            widget: "list"
+            fields:
+              - { label: "Tier ID", name: "tierId", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Price Label", name: "priceLabel", widget: "string" }
+              - { label: "Price ID", name: "priceId", widget: "string" }
+          - { label: "Venue Title", name: "venueTitle", widget: "string" }
+          - { label: "Venue Description", name: "venueDescription", widget: "text" }
+          - { label: "Travel Title", name: "travelTitle", widget: "string" }
+          - { label: "Travel Description", name: "travelDescription", widget: "text" }
+          - { label: "Travel Bullets", name: "travelBullets", widget: "list" }
+          - { label: "Faq Title", name: "faqTitle", widget: "string" }
+          - { label: "Faq Description", name: "faqDescription", widget: "string" }
+          - label: "FAQs"
+            name: "faqs"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+          - { label: "Partners Title", name: "partnersTitle", widget: "string" }
+          - { label: "Partners Description", name: "partnersDescription", widget: "string" }
+          - { label: "Partners", name: "partners", widget: "list" }
+          - { label: "Contact Title", name: "contactTitle", widget: "string" }
+          - { label: "Contact Description", name: "contactDescription", widget: "text" }
+          - { label: "Footer Title", name: "footerTitle", widget: "string" }
+          - { label: "Footer Description", name: "footerDescription", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Footer Copyright", name: "footerCopyright", widget: "string" }
