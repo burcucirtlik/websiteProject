@@ -2,15 +2,12 @@ backend:
   name: github
   repo: burcucirtlik/websiteProject
   branch: main
-  auth_endpoint: https://your-worker-url.example.com/auth
-  app_id: your-github-oauth-app-id
-local_backend: false
-site_url: https://burcucirtlik.github.io/websiteProject
-display_url: https://burcucirtlik.github.io/websiteProject
-auth_redirect: https://burcucirtlik.github.io/websiteProject/admin/auth.html
+  auth_scope: repo
+  base_url: https://websiteproject-auth.burcucirtlik.workers.dev
+
 media_folder: "public/uploads"
 public_folder: "/uploads"
-publish_mode: editorial_workflow
+
 collections:
   - name: "site"
     label: "Site Content"
