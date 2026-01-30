@@ -4,6 +4,7 @@ backend:
   branch: main
   auth_scope: repo
   base_url: https://websiteproject-auth.burcucirtlik.workers.dev
+  auth_endpoint: /auth
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
