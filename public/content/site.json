@@ -47,13 +47,13 @@
   ],
   "headerMeta": "Fairyland",
   "note": "Choose a ticket tier to continue. This demo uses mocked Stripe values; replace them with live keys to activate payments.",
-  "heroLead": "At the heart of the festival is the open practice hall, where everyone can juggle freely, share new patterns, and explore passing games together. Guided workshops add focused learning with expert jugglers, while community showcases, friendly competitions, and an open-stage renegade night invite anyone to perform. Over three bright days by the Aegean coast, we gather for an inclusive, FLINTA+ friendly celebration of skill-sharing, playful experimentation, and joyful connection.",
+  "heroLead": "Zena At the heart of the festival is the open practice hall, where everyone can juggle freely, share new patterns, and explore passing games together. Guided workshops add focused learning with expert jugglers, while community showcases, friendly competitions, and an open-stage renegade night invite anyone to perform. Over three bright days by the Aegean coast, we gather for an inclusive, FLINTA+ friendly celebration of skill-sharing, playful experimentation, and joyful connection.",
   "travelBullets": [
     "Parking capacity: 1,500 vehicles",
     "Accessible entrances at all gates",
     "Bike parking available"
   ],
-  "contactTitle": "Contacts",
+  "contactTitle": "Contacts123",
   "locationValue": "Izmir / Seferihisar",
   "email": "hello@kunterbuntfest.com",
   "contactDescription": "Reach out for partnerships, accessibility requests, or ticket support.",
@@ -72,7 +72,7 @@
     }
   ],
   "footerTitle": "Kunterbunt Juggling Festival",
-  "heroTitle": "Kunterbunt Juggling Festival 2025",
-  "travelTitle": "Travel",
+  "heroTitle": "Kunterbunt Festival 2026",
+  "travelTitle": "Travel ",
   "locationLabel": "Location"
 }
