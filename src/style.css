@@ -275,14 +275,16 @@ summary:focus-visible {
 .support-widget {
   display: grid;
   gap: 1rem;
+  width: 100%;
 }
 
 .support-widget iframe {
   width: 100%;
-  min-height: 280px;
-  border: 1px solid var(--border);
+  height: 700px;
+  border: none;
   border-radius: 18px;
   background: var(--surface);
+  display: block;
 }
 
 .section {
