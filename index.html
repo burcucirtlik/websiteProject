@@ -42,85 +42,27 @@
               <p class="eyebrow" data-content="eyebrow">Juggling • Flow Arts • Community</p>
               <h1 data-content="heroTitle">Kunterbunt Juggling Festival 2025</h1>
               <p class="lead" data-content="heroLead">
-                At the heart of the festival is the open practice hall, where everyone can juggle
-                freely, share new patterns, and explore passing games together. Guided workshops
-                add focused learning with expert jugglers, while community showcases, friendly
-                competitions, and an open-stage renegade night invite anyone to perform.
-                Over three bright days by the Aegean coast, we gather for an inclusive,
-                FLINTA+ friendly celebration of skill-sharing, playful experimentation, and
-                joyful connection.
+                FLINTA+ is an inclusive umbrella term used for women, lesbians, intersex, non-binary,
+                trans, and agender people. Kunterbunt Juggling Festival is built as a safer and joyful
+                space where this community and allies can practice, learn, and celebrate together.
+                During three vibrant days, participants share tricks in the open hall, join workshops,
+                collaborate in passing sessions, and enjoy shows designed around solidarity and creativity.
               </p>
-              <div class="ticket-options" data-animate>
-                <label class="ticket-option" data-ticket-tier="early-bird">
-                  <input
-                    type="radio"
-                    name="ticket-tier"
-                    value="early-bird"
-                    checked
-                    data-price-id="price_mock_early"
-                    data-display="Early Bird"
-                  />
-                  <span>
-                    <strong data-ticket-field="title">Early Bird</strong>
-                    <span class="ticket-price-label" data-ticket-field="priceLabel">₺990 • Limited</span>
-                  </span>
-                </label>
-                <label class="ticket-option" data-ticket-tier="full-support">
-                  <input
-                    type="radio"
-                    name="ticket-tier"
-                    value="full-support"
-                    data-price-id="price_mock_full"
-                    data-display="Full Support"
-                  />
-                  <span>
-                    <strong data-ticket-field="title">Full Support</strong>
-                    <span class="ticket-price-label" data-ticket-field="priceLabel">₺1.450 • Standard</span>
-                  </span>
-                </label>
-                <label class="ticket-option" data-ticket-tier="community">
-                  <input
-                    type="radio"
-                    name="ticket-tier"
-                    value="community"
-                    data-price-id="price_mock_community"
-                    data-display="Community"
-                  />
-                  <span>
-                    <strong data-ticket-field="title">Community</strong>
-                    <span class="ticket-price-label" data-ticket-field="priceLabel">₺1.150 • Sliding</span>
-                  </span>
-                </label>
-                <label class="ticket-option" data-ticket-tier="solidarity">
-                  <input
-                    type="radio"
-                    name="ticket-tier"
-                    value="solidarity"
-                    data-price-id="price_mock_solidarity"
-                    data-display="Solidarity"
-                  />
-                  <span>
-                    <strong data-ticket-field="title">Solidarity</strong>
-                    <span class="ticket-price-label" data-ticket-field="priceLabel">₺1.950 • Sponsor</span>
-                  </span>
-                </label>
-              </div>
               <div class="hero-actions">
-                <button
+                <a
                   class="btn"
-                  id="stripe-checkout"
-                  type="button"
-                  data-stripe-key="pk_test_mock"
-                  data-success-url="https://example.com/success"
-                  data-cancel-url="https://example.com/cancel"
+                  href="https://pretix.eu/"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-content="ticketButtonLabel"
+                  data-ticket-link="true"
                 >
-                  Continue to Checkout
-                </button>
+                  Bilet Al
+                </a>
                 <a class="btn btn-ghost" href="#mekan">See Venue</a>
               </div>
               <p class="note" data-content="note">
-                Choose a ticket tier to continue. This demo uses mocked Stripe values; replace
-                them with live keys to activate payments.
+                Ticket sales are managed on Pretix.
               </p>
               <div class="hero-meta">
                 <div>
@@ -133,18 +75,17 @@
                 </div>
               </div>
             </div>
-            <div class="hero-visual" data-parallax="0.2">
-              <div class="orb orb-one"></div>
-              <div class="orb orb-two"></div>
-              <div class="orb orb-three"></div>
-              <div class="ticket-card" data-animate>
-                <p class="ticket-label">3-Day Pass</p>
-                <p class="ticket-price">₺1.450</p>
-                <p class="ticket-note">Limited release • Early circle</p>
-              </div>
-              <div class="juggling-visuals" data-animate>
-                <img src="juggling-1.svg" alt="Minimal juggling clubs illustration" />
-                <img src="juggling-2.svg" alt="Minimal juggling rings illustration" />
+            <div class="hero-gallery" data-parallax="0.1">
+              <div class="gallery-deck" data-animate>
+                <figure class="deck-card">
+                  <img src="juggling-1.svg" alt="Juggling clubs illustration" />
+                </figure>
+                <figure class="deck-card">
+                  <img src="juggling-2.svg" alt="Juggling rings illustration" />
+                </figure>
+                <figure class="deck-card">
+                  <img src="vite.svg" alt="Festival abstract icon" />
+                </figure>
               </div>
             </div>
           </div>
@@ -247,7 +188,6 @@
         </div>
       </footer>
     </div>
-    <script src="https://js.stripe.com/v3"></script>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>

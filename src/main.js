@@ -58,8 +58,6 @@ prefersReducedMotion.addEventListener('change', (event) => {
   }
 })
 
-const stripeButton = document.querySelector('#stripe-checkout')
-
 const applyContent = (content) => {
   document.querySelectorAll('[data-content]').forEach((element) => {
     const key = element.dataset.content
@@ -72,25 +70,13 @@ const applyContent = (content) => {
     if (key === 'phone' && element instanceof HTMLAnchorElement) {
       element.href = `tel:${content[key].replace(/\\s+/g, '')}`
     }
-  })
-
-  if (Array.isArray(content.ticketOptions)) {
-    content.ticketOptions.forEach((option, index) => {
-      const tier = document.querySelector(`[data-ticket-tier=\"${option.tierId}\"]`)
-      if (!tier) return
-      const titleEl = tier.querySelector('[data-ticket-field=\"title\"]')
-      const priceEl = tier.querySelector('[data-ticket-field=\"priceLabel\"]')
-      const input = tier.querySelector('input[type=\"radio\"]')
-
-      if (titleEl) titleEl.textContent = option.title
-      if (priceEl) priceEl.textContent = option.priceLabel
-      if (input) {
-        input.dataset.priceId = option.priceId
-        input.dataset.display = option.title
-        input.checked = index === 0
+    if (key === 'ticketButtonLabel' && element instanceof HTMLAnchorElement) {
+      element.textContent = content[key]
+      if (content.ticketUrl) {
+        element.href = content.ticketUrl
       }
-    })
-  }
+    }
+  })
 
   const travelList = document.querySelector('[data-list=\"travelBullets\"]')
   if (travelList && Array.isArray(content.travelBullets)) {
@@ -128,52 +114,6 @@ const applyContent = (content) => {
       partnersList.appendChild(div)
     })
   }
-}
-
-if (stripeButton) {
-  stripeButton.addEventListener('click', async () => {
-    const publishableKey = stripeButton.dataset.stripeKey
-    const selectedTier = document.querySelector('input[name="ticket-tier"]:checked')
-    const priceId = selectedTier?.dataset.priceId
-    const successUrl = stripeButton.dataset.successUrl || window.location.origin
-    const cancelUrl = stripeButton.dataset.cancelUrl || window.location.href
-
-    const isMocked =
-      publishableKey === 'pk_test_mock' || (priceId ? priceId.startsWith('price_mock') : false)
-
-    if (!publishableKey || !priceId) {
-      window.alert('Stripe checkout is not configured. Please add your publishable key and price ID.')
-      return
-    }
-
-    if (!selectedTier) {
-      window.alert('Please select a ticket option to continue.')
-      return
-    }
-
-    if (isMocked) {
-      const tierName = selectedTier?.dataset.display || 'this ticket'
-      window.alert(`Mock checkout enabled for ${tierName}. Replace Stripe keys to process real payments.`)
-      return
-    }
-
-    if (!window.Stripe) {
-      window.alert('Stripe.js failed to load. Please check your network connection.')
-      return
-    }
-
-    const stripe = window.Stripe(publishableKey)
-    const { error } = await stripe.redirectToCheckout({
-      lineItems: [{ price: priceId, quantity: 1 }],
-      mode: 'payment',
-      successUrl,
-      cancelUrl,
-    })
-
-    if (error) {
-      window.alert(error.message)
-    }
-  })
 }
 
 fetch('./content/site.json')

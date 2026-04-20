@@ -2,13 +2,15 @@ backend:
   name: github
   repo: burcucirtlik/websiteProject
   branch: main
-  auth_scope: repo
-  base_url: https://websiteproject-auth.burcucirtlik.workers.dev
-  auth_endpoint: /auth
-
+  auth_endpoint: https://your-worker-url.example.com/auth
+  app_id: your-github-oauth-app-id
+local_backend: false
+site_url: https://burcucirtlik.github.io/websiteProject
+display_url: https://burcucirtlik.github.io/websiteProject
+auth_redirect: https://burcucirtlik.github.io/websiteProject/admin/auth.html
 media_folder: "public/uploads"
 public_folder: "/uploads"
-
+publish_mode: editorial_workflow
 collections:
   - name: "site"
     label: "Site Content"
@@ -24,18 +26,12 @@ collections:
           - { label: "Hero Title", name: "heroTitle", widget: "string" }
           - { label: "Hero Lead", name: "heroLead", widget: "text" }
           - { label: "Note", name: "note", widget: "text" }
+          - { label: "Ticket Button Label", name: "ticketButtonLabel", widget: "string" }
+          - { label: "Ticket URL", name: "ticketUrl", widget: "string" }
           - { label: "Dates Label", name: "datesLabel", widget: "string" }
           - { label: "Dates Value", name: "datesValue", widget: "string" }
           - { label: "Location Label", name: "locationLabel", widget: "string" }
           - { label: "Location Value", name: "locationValue", widget: "string" }
-          - label: "Ticket Options"
-            name: "ticketOptions"
-            widget: "list"
-            fields:
-              - { label: "Tier ID", name: "tierId", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Price Label", name: "priceLabel", widget: "string" }
-              - { label: "Price ID", name: "priceId", widget: "string" }
           - { label: "Venue Title", name: "venueTitle", widget: "string" }
           - { label: "Venue Description", name: "venueDescription", widget: "text" }
           - { label: "Travel Title", name: "travelTitle", widget: "string" }
