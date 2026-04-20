@@ -275,15 +275,13 @@ summary:focus-visible {
 .support-widget {
   display: grid;
   gap: 1rem;
-  width: 100%;
 }
 
-.support-widget iframe {
+.support-preview {
   width: 100%;
-  height: 700px;
-  border: none;
+  max-height: 420px;
+  object-fit: cover;
   border-radius: 18px;
-  background: var(--surface);
   display: block;
 }
 
