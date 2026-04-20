@@ -25,9 +25,14 @@ collections:
           - { label: "Eyebrow", name: "eyebrow", widget: "string" }
           - { label: "Hero Title", name: "heroTitle", widget: "string" }
           - { label: "Hero Lead", name: "heroLead", widget: "text" }
+          - { label: "Hero GIF URL", name: "heroGifUrl", widget: "string" }
           - { label: "Note", name: "note", widget: "text" }
           - { label: "Ticket Button Label", name: "ticketButtonLabel", widget: "string" }
           - { label: "Ticket URL", name: "ticketUrl", widget: "string" }
+          - { label: "Support Title", name: "supportTitle", widget: "string" }
+          - { label: "Support Description", name: "supportDescription", widget: "text" }
+          - { label: "Support Button Label", name: "supportButtonLabel", widget: "string" }
+          - { label: "GoFundMe URL", name: "gofundmeUrl", widget: "string" }
           - { label: "Dates Label", name: "datesLabel", widget: "string" }
           - { label: "Dates Value", name: "datesValue", widget: "string" }
           - { label: "Location Label", name: "locationLabel", widget: "string" }

@@ -263,8 +263,26 @@ summary:focus-visible {
 
 .deck-card img {
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: contain;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.deck-card-media {
+  padding: 0.75rem;
+}
+
+.support-widget {
+  display: grid;
+  gap: 1rem;
+}
+
+.support-widget iframe {
+  width: 100%;
+  min-height: 280px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
 }
 
 .section {

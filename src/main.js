@@ -78,6 +78,31 @@ const applyContent = (content) => {
     }
   })
 
+  document.querySelectorAll('[data-content-link]').forEach((element) => {
+    const key = element.dataset.contentLink
+    if (!key || !content[key]) return
+
+    if (element instanceof HTMLAnchorElement) {
+      element.href = content[key]
+    }
+
+    if (element instanceof HTMLIFrameElement) {
+      const url = new URL(element.src)
+      if (key === 'gofundmeUrl') {
+        url.href = `${content[key]}/widget/large`
+      } else {
+        url.href = content[key]
+      }
+      element.src = url.toString()
+    }
+  })
+
+  document.querySelectorAll('[data-content-image]').forEach((element) => {
+    const key = element.dataset.contentImage
+    if (!key || !content[key] || !(element instanceof HTMLImageElement)) return
+    element.src = content[key]
+  })
+
   const travelList = document.querySelector('[data-list=\"travelBullets\"]')
   if (travelList && Array.isArray(content.travelBullets)) {
     travelList.innerHTML = ''
