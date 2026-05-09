@@ -2,12 +2,12 @@ backend:
   name: github
   repo: burcucirtlik/websiteProject
   branch: main
-  auth_endpoint: https://your-worker-url.example.com/auth
-  app_id: your-github-oauth-app-id
+  auth_endpoint: https://websiteproject-auth.burcucirtlik.workers.dev/auth
+  app_id: Ov23liagb7pwiXxXuNSw
 local_backend: false
-site_url: https://burcucirtlik.github.io/websiteProject
-display_url: https://burcucirtlik.github.io/websiteProject
-auth_redirect: https://burcucirtlik.github.io/websiteProject/admin/auth.html
+site_url: https://kunterbuntjuggling.com
+display_url: https://kunterbuntjuggling.com
+auth_redirect: https://kunterbuntjuggling.com/admin/auth.html
 media_folder: "public/uploads"
 public_folder: "/uploads"
 publish_mode: editorial_workflow
