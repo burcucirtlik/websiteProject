@@ -41,7 +41,12 @@ collections:
           - { label: "Venue Description", name: "venueDescription", widget: "text" }
           - { label: "Travel Title", name: "travelTitle", widget: "string" }
           - { label: "Travel Description", name: "travelDescription", widget: "text" }
-          - { label: "Travel Bullets", name: "travelBullets", widget: "list" }
+          - label: "Travel Sections"
+            name: "travelSections"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
           - { label: "Faq Title", name: "faqTitle", widget: "string" }
           - { label: "Faq Description", name: "faqDescription", widget: "string" }
           - label: "FAQs"
@@ -58,5 +63,12 @@ collections:
           - { label: "Footer Title", name: "footerTitle", widget: "string" }
           - { label: "Footer Description", name: "footerDescription", widget: "string" }
           - { label: "Email", name: "email", widget: "string" }
-          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Instagram URL", name: "instagramUrl", widget: "string" }
+          - { label: "Instagram Label", name: "instagramLabel", widget: "string" }
+          - { label: "Terms Title", name: "termsTitle", widget: "string" }
+          - { label: "Terms Description", name: "termsDescription", widget: "text" }
+          - { label: "Privacy Document 1 Label", name: "privacyDocumentOneLabel", widget: "string" }
+          - { label: "Privacy Document 1 PDF", name: "privacyDocumentOneUrl", widget: "file", required: false, media_library: { config: { multiple: false } } }
+          - { label: "Privacy Document 2 Label", name: "privacyDocumentTwoLabel", widget: "string" }
+          - { label: "Privacy Document 2 PDF", name: "privacyDocumentTwoUrl", widget: "file", required: false, media_library: { config: { multiple: false } } }
           - { label: "Footer Copyright", name: "footerCopyright", widget: "string" }

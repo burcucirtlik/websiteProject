@@ -67,14 +67,17 @@ const applyContent = (content) => {
     if (key === 'email' && element instanceof HTMLAnchorElement) {
       element.href = `mailto:${content[key]}`
     }
-    if (key === 'phone' && element instanceof HTMLAnchorElement) {
-      element.href = `tel:${content[key].replace(/\\s+/g, '')}`
-    }
     if (key === 'ticketButtonLabel' && element instanceof HTMLAnchorElement) {
       element.textContent = content[key]
       if (content.ticketUrl) {
         element.href = content.ticketUrl
       }
+    }
+  })
+
+  document.querySelectorAll('[data-email-link]').forEach((element) => {
+    if (element instanceof HTMLAnchorElement && content.email) {
+      element.href = `mailto:${content.email}`
     }
   })
 
@@ -84,6 +87,11 @@ const applyContent = (content) => {
 
     if (element instanceof HTMLAnchorElement) {
       element.href = content[key]
+      if (key.startsWith('privacyDocument')) {
+        element.removeAttribute('aria-disabled')
+        element.setAttribute('target', '_blank')
+        element.setAttribute('rel', 'noreferrer')
+      }
     }
 
     if (element instanceof HTMLIFrameElement) {
@@ -103,13 +111,19 @@ const applyContent = (content) => {
     element.src = content[key]
   })
 
-  const travelList = document.querySelector('[data-list=\"travelBullets\"]')
-  if (travelList && Array.isArray(content.travelBullets)) {
-    travelList.innerHTML = ''
-    content.travelBullets.forEach((item) => {
-      const li = document.createElement('li')
-      li.textContent = item
-      travelList.appendChild(li)
+  const travelSections = document.querySelector('[data-list=\"travelSections\"]')
+  if (travelSections && Array.isArray(content.travelSections)) {
+    travelSections.innerHTML = ''
+    content.travelSections.forEach((item) => {
+      const article = document.createElement('article')
+      article.className = 'travel-option'
+      const title = document.createElement('h4')
+      title.textContent = item.title
+      const description = document.createElement('p')
+      description.textContent = item.description
+      article.appendChild(title)
+      article.appendChild(description)
+      travelSections.appendChild(article)
     })
   }
 

@@ -30,6 +30,7 @@
             <a href="#sss">FAQ</a>
             <a href="#sponsorlar">Partners</a>
             <a href="#contacts">Contacts</a>
+            <a href="#terms">Terms</a>
           </nav>
           <a class="btn btn-small" href="#bilet">Get Tickets</a>
         </div>
@@ -76,15 +77,16 @@
               </div>
             </div>
             <div class="hero-gallery" data-parallax="0.1">
-  <div class="gallery-deck" data-animate>
-    <figure class="deck-card deck-card-media">
-      <img
-        src="/getsitecontrol__convert-video-to-gif__free.gif"
-        alt="Animasyonlu GIF"
-      />
-    </figure>
-  </div>
-</div>
+              <div class="gallery-deck" data-animate>
+                <figure class="deck-card deck-card-media">
+                  <img
+                    src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1200&q=80"
+                    alt="Kunterbunt community juggling together"
+                    data-content-image="heroGifUrl"
+                  />
+                </figure>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -98,21 +100,23 @@
               </p>
             </div>
             <div class="support-widget" data-animate>
-  <img
-    src="/gofundme-preview.jpg"
-    alt="Support Kunterbunt on GoFundMe"
-    class="support-preview"
-  />
-
-  <a
-    class="btn"
-    href="https://www.gofundme.com/f/kunterbunt-juggling-convention"
-    target="_blank"
-    rel="noreferrer"
-  >
-    Open GoFundMe
-  </a>
-</div>
+              <iframe
+                title="GoFundMe widget"
+                src="https://www.gofundme.com/f/kunterbunt-juggling-convention/widget/large"
+                loading="lazy"
+                data-content-link="gofundmeUrl"
+              ></iframe>
+              <a
+                class="btn btn-ghost"
+                href="https://www.gofundme.com/f/kunterbunt-juggling-convention"
+                target="_blank"
+                rel="noreferrer"
+                data-content="supportButtonLabel"
+                data-content-link="gofundmeUrl"
+              >
+                Open GoFundMe
+              </a>
+            </div>
           </div>
         </section>
 
@@ -134,12 +138,23 @@
               </div>
               <div class="map-info">
                 <h3 data-content="travelTitle">Travel</h3>
-                <p data-content="travelDescription">Shuttles from central Izmir depart every 30 minutes.</p>
-                <ul data-list="travelBullets">
-                  <li>Parking capacity: 1,500 vehicles</li>
-                  <li>Accessible entrances at all gates</li>
-                  <li>Bike parking available</li>
-                </ul>
+                <p data-content="travelDescription">
+                  Choose the route that works best for you. We will keep this section updated as venue details are confirmed.
+                </p>
+                <div class="travel-options" data-list="travelSections">
+                  <article class="travel-option">
+                    <h4>Public Transport</h4>
+                    <p>Use regional trains, buses, or local shuttles where available. Detailed station and connection notes will be shared before the festival.</p>
+                  </article>
+                  <article class="travel-option">
+                    <h4>Car</h4>
+                    <p>If you arrive by car, please consider carpooling and follow the on-site parking guidance from the festival team.</p>
+                  </article>
+                  <article class="travel-option">
+                    <h4>Camper</h4>
+                    <p>Camper information will be announced closer to the event, including arrival windows and overnight parking rules.</p>
+                  </article>
+                </div>
               </div>
             </div>
           </div>
@@ -191,9 +206,39 @@
                 Reach out for partnerships, accessibility requests, or ticket support.
               </p>
             </div>
-            <div class="contact-card" data-animate>
-              <a href="mailto:hello@kunterbuntfest.com" data-content="email">hello@kunterbuntfest.com</a>
-              <a href="tel:+902120000000" data-content="phone">+90 212 000 00 00</a>
+            <div class="contact-widgets" data-animate>
+              <a class="contact-widget" href="mailto:kunterbuntjuggling@gmail.com" data-email-link="true">
+                <span class="widget-icon" aria-hidden="true">✉</span>
+                <span>
+                  <strong>Email</strong>
+                  <small data-content="email">kunterbuntjuggling@gmail.com</small>
+                </span>
+              </a>
+              <a
+                class="contact-widget"
+                href="https://www.instagram.com/kunterbuntjuggling/"
+                target="_blank"
+                rel="noreferrer"
+                data-content-link="instagramUrl"
+              >
+                <span class="widget-icon" aria-hidden="true">◎</span>
+                <span>
+                  <strong>Instagram</strong>
+                  <small data-content="instagramLabel">@kunterbuntjuggling</small>
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="section" id="terms">
+          <div class="container">
+            <div class="section-header" data-animate>
+              <h2 data-content="termsTitle">Terms</h2>
+              <p data-content="termsDescription">Privacy and policy documents will be available here soon.</p>
+            </div>
+            <div class="terms-card" data-animate>
+              <a class="btn btn-ghost" href="#" aria-disabled="true" data-content="privacyDocumentOneLabel" data-content-link="privacyDocumentOneUrl">Privacy Document 1 coming soon</a>
+              <a class="btn btn-ghost" href="#" aria-disabled="true" data-content="privacyDocumentTwoLabel" data-content-link="privacyDocumentTwoUrl">Privacy Document 2 coming soon</a>
             </div>
           </div>
         </section>
@@ -206,8 +251,9 @@
             <p data-content="footerDescription">Stay updated for workshops, jam sessions, and ticket releases.</p>
           </div>
           <div class="footer-links">
-            <a href="mailto:hello@kunterbuntfest.com" data-content="email">hello@kunterbuntfest.com</a>
-            <a href="tel:+902120000000" data-content="phone">+90 212 000 00 00</a>
+            <a href="mailto:kunterbuntjuggling@gmail.com" data-content="email" data-email-link="true">kunterbuntjuggling@gmail.com</a>
+            <a href="https://www.instagram.com/kunterbuntjuggling/" target="_blank" rel="noreferrer" data-content-link="instagramUrl" data-content="instagramLabel">@kunterbuntjuggling</a>
+            <a href="#terms">Terms</a>
             <span data-content="footerCopyright">© 2025 Kunterbunt Juggling Festival</span>
           </div>
         </div>
