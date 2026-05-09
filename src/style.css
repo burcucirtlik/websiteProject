@@ -581,6 +581,52 @@ summary:focus-visible {
   font-weight: 800;
 }
 
+.impressum-card {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.impressum-block {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.impressum-block h3 {
+  margin: 0 0 1rem;
+  color: var(--secondary);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.impressum-block p {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.impressum-block p:last-child {
+  margin-bottom: 0;
+}
+
+.impressum-block a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (min-width: 900px) {
+  .impressum-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .impressum-block:first-child {
+    grid-row: span 2;
+  }
+}
+
 .terms-card {
   display: flex;
   flex-wrap: wrap;
