@@ -263,9 +263,11 @@ summary:focus-visible {
 
 .deck-card img {
   width: 100%;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: auto;
+  max-height: 480px;
   object-fit: cover;
   border-radius: 12px;
+  display: block;
 }
 
 .deck-card-media {
@@ -273,16 +275,71 @@ summary:focus-visible {
 }
 
 .support-widget {
-  display: grid;
-  gap: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
-.support-widget iframe {
+.gofundme-card {
+  position: relative;
+  width: min(620px, 100%);
+  background: linear-gradient(145deg, rgba(52, 23, 68, 0.95), rgba(37, 16, 47, 0.98));
+  border: 1px solid rgba(255, 144, 200, 0.25);
+  border-radius: 28px;
+  padding: 2rem;
+  box-shadow:
+    0 0 0 1px rgba(255, 144, 200, 0.08),
+    0 24px 60px rgba(0, 0, 0, 0.45),
+    0 8px 24px rgba(155, 123, 255, 0.15);
+  overflow: hidden;
+}
+
+.gofundme-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% -20%, rgba(255, 144, 200, 0.18) 0%, transparent 65%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.gofundme-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.gofundme-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  background: linear-gradient(120deg, rgba(255, 144, 200, 0.18), rgba(155, 123, 255, 0.18));
+  border: 1px solid rgba(255, 144, 200, 0.3);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--secondary);
+  letter-spacing: 0.04em;
+}
+
+.gofundme-frame-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #fff;
+}
+
+.gofundme-frame-wrap iframe {
   width: 100%;
-  min-height: 280px;
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  background: var(--surface);
+  height: 380px;
+  border: 0;
+  display: block;
+}
+
+.gofundme-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
 }
 
 .section {
