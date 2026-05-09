@@ -60,7 +60,7 @@ prefersReducedMotion.addEventListener('change', (event) => {
 
 const isSafeUrl = (url) =>
   typeof url === 'string' &&
-  (url.startsWith('https://') || url.startsWith('http://') || url.startsWith('mailto:'))
+  (url.startsWith('https://') || url.startsWith('http://') || url.startsWith('mailto:') || url.startsWith('/'))
 
 const applyContent = (content) => {
   document.querySelectorAll('[data-content]').forEach((element) => {
