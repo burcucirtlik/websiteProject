@@ -2,8 +2,7 @@ backend:
   name: github
   repo: burcucirtlik/websiteProject
   branch: main
-  auth_endpoint: https://websiteproject-auth.burcucirtlik.workers.dev/auth
-  app_id: Ov23liagb7pwiXxXuNSw
+  base_url: https://websiteproject-auth.burcucirtlik.workers.dev
 local_backend: false
 site_url: https://kunterbuntjuggling.com
 display_url: https://kunterbuntjuggling.com
