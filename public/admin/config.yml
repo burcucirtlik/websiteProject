@@ -24,7 +24,6 @@ collections:
           - { label: "Eyebrow", name: "eyebrow", widget: "string" }
           - { label: "Hero Title", name: "heroTitle", widget: "string" }
           - { label: "Hero Lead", name: "heroLead", widget: "text" }
-          - { label: "Hero GIF URL", name: "heroGifUrl", widget: "string" }
           - { label: "Note", name: "note", widget: "text" }
           - { label: "Ticket Button Label", name: "ticketButtonLabel", widget: "string" }
           - { label: "Ticket URL", name: "ticketUrl", widget: "string" }

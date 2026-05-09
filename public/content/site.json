@@ -7,7 +7,6 @@
   "note": "Ticket sales are managed on Pretix.",
   "ticketButtonLabel": "Buy Tickets",
   "ticketUrl": "https://pretix.eu/",
-  "heroGifUrl": "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1200&q=80",
   "datesLabel": "Dates",
   "datesValue": "12-14 July 2025",
   "locationLabel": "Location",
