@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; frame-src https://www.gofundme.com https://www.google.com; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'self';" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta
       name="description"
       content="Kunterbunt Juggling Festivali: 12-14 July 2025, Izmir. Inclusive juggling culture, workshops, and community."
@@ -111,6 +114,7 @@
                     loading="lazy"
                     data-content-link="gofundmeUrl"
                     scrolling="no"
+                    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
                   ></iframe>
                 </div>
                 <div class="gofundme-footer">
@@ -144,6 +148,7 @@
                   title="Festival location map"
                   loading="lazy"
                   src="https://www.google.com/maps?q=48.210033,16.363449&z=14&output=embed"
+                  sandbox="allow-scripts allow-same-origin"
                 ></iframe>
               </div>
               <div class="map-info">

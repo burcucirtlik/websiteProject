@@ -58,6 +58,10 @@ prefersReducedMotion.addEventListener('change', (event) => {
   }
 })
 
+const isSafeUrl = (url) =>
+  typeof url === 'string' &&
+  (url.startsWith('https://') || url.startsWith('http://') || url.startsWith('mailto:'))
+
 const applyContent = (content) => {
   document.querySelectorAll('[data-content]').forEach((element) => {
     const key = element.dataset.content
@@ -86,6 +90,7 @@ const applyContent = (content) => {
     if (!key || !content[key]) return
 
     if (element instanceof HTMLAnchorElement) {
+      if (!isSafeUrl(content[key])) return
       element.href = content[key]
       if (key.startsWith('privacyDocument')) {
         element.removeAttribute('aria-disabled')
