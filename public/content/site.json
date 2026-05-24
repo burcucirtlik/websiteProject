@@ -4,7 +4,7 @@
   "faqTitle": "FAQ",
   "instagramLabel": "@kunterbuntjuggling",
   "festivalName": "Kunterbunt Juggling Festival",
-  "ticketUrl": "https://pretix.eu/",
+  "ticketUrl": "https://pretix.eu/kunterbuntjuggling/2026/",
   "privacyDocumentTwoUrl": "/uploads/datenschutzerk.pdf",
   "faqDescription": "Frequently asked questions about the festival experience.",
   "travelSections": [
@@ -24,7 +24,7 @@
   "venueTitle": "Venue / Map",
   "supportTitle": "Support Kunterbunt",
   "eyebrow": "Juggling • FLINTA+ • Community",
-  "gofundmeUrl": "https://www.gofundme.com/f/kunterbunt-juggling-convention",
+  "gofundmeUrl": "https://gofund.me/d3b8fdc64",
   "partners": [],
   "privacyDocumentTwoLabel": "Datenschutzerk",
   "footerCopyright": "© 2025 Kunterbunt Juggling Festival",
@@ -48,10 +48,6 @@
   "email": "kunterbuntjuggling@gmail.com",
   "contactDescription": "Reach out for partnerships, accessibility requests, or ticket support.",
   "faqs": [
-    {
-      "question": "Can I transfer my ticket?",
-      "answer": "???"
-    },
     {
       "question": "Is there a camping area?",
       "answer": "Yes, a supervised camping area is located next to the festival grounds."
