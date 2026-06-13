@@ -160,7 +160,9 @@ const applyContent = (content) => {
   }
 }
 
-fetch('./content/site.json')
+const buildId = import.meta.env.VITE_BUILD_ID || 'dev'
+
+fetch(`./content/site.json?v=${buildId}`)
   .then((response) => {
     if (!response.ok) {
       throw new Error('Failed to load content')
