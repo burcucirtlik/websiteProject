@@ -62,6 +62,34 @@ const isSafeUrl = (url) =>
   typeof url === 'string' &&
   (url.startsWith('https://') || url.startsWith('http://') || url.startsWith('mailto:') || url.startsWith('/'))
 
+/**
+ * Splits text by double newlines into paragraphs.
+ * Lines starting with '-' or '•' within a paragraph become a <ul> list.
+ * Single newlines within a paragraph are preserved via white-space: pre-line in CSS.
+ */
+const formatText = (container, text) => {
+  const paragraphs = text.split(/\n{2,}/)
+  paragraphs.forEach((para) => {
+    const trimmed = para.trim()
+    if (!trimmed) return
+    const lines = trimmed.split('\n').filter((l) => l.trim())
+    const allBullets = lines.length > 1 && lines.every((l) => /^[-•]/.test(l.trim()))
+    if (allBullets) {
+      const ul = document.createElement('ul')
+      lines.forEach((l) => {
+        const li = document.createElement('li')
+        li.textContent = l.replace(/^[-•]\s*/, '').trim()
+        ul.appendChild(li)
+      })
+      container.appendChild(ul)
+    } else {
+      const p = document.createElement('p')
+      p.textContent = trimmed
+      container.appendChild(p)
+    }
+  })
+}
+
 const applyContent = (content) => {
   document.querySelectorAll('[data-content]').forEach((element) => {
     const key = element.dataset.content
@@ -116,23 +144,21 @@ const applyContent = (content) => {
     element.src = content[key]
   })
 
-  const travelSections = document.querySelector('[data-list=\"travelSections\"]')
+  const travelSections = document.querySelector('[data-list="travelSections"]')
   if (travelSections && Array.isArray(content.travelSections)) {
     travelSections.innerHTML = ''
     content.travelSections.forEach((item) => {
-      const article = document.createElement('article')
-      article.className = 'travel-option'
-      const title = document.createElement('h4')
-      title.textContent = item.title
-      const description = document.createElement('p')
-      description.textContent = item.description
-      article.appendChild(title)
-      article.appendChild(description)
-      travelSections.appendChild(article)
+      const details = document.createElement('details')
+      details.className = 'travel-option'
+      const summary = document.createElement('summary')
+      summary.textContent = item.title
+      details.appendChild(summary)
+      formatText(details, item.description)
+      travelSections.appendChild(details)
     })
   }
 
-  const faqList = document.querySelector('[data-list=\"faqs\"]')
+  const faqList = document.querySelector('[data-list="faqs"]')
   if (faqList && Array.isArray(content.faqs)) {
     faqList.innerHTML = ''
     content.faqs.forEach((item, index) => {
@@ -140,15 +166,13 @@ const applyContent = (content) => {
       if (index === 0) details.open = true
       const summary = document.createElement('summary')
       summary.textContent = item.question
-      const answer = document.createElement('p')
-      answer.textContent = item.answer
       details.appendChild(summary)
-      details.appendChild(answer)
+      formatText(details, item.answer)
       faqList.appendChild(details)
     })
   }
 
-  const partnersList = document.querySelector('[data-list=\"partners\"]')
+  const partnersList = document.querySelector('[data-list="partners"]')
   if (partnersList && Array.isArray(content.partners)) {
     partnersList.innerHTML = ''
     content.partners.forEach((partner) => {
