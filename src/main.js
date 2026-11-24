@@ -193,7 +193,13 @@ fetch(`./content/site.json?v=${buildId}`)
     }
     return response.json()
   })
-  .then((data) => applyContent(data))
+  .then((data) => {
+    applyContent(data)
+    // Inside the Tina admin preview: enable live editing.
+    if (window.parent !== window) {
+      import('./tina-preview.js').then(({ initTinaPreview }) => initTinaPreview(data, applyContent))
+    }
+  })
   .catch((error) => {
     console.warn('Content load error:', error)
   })
